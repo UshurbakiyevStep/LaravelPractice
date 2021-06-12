@@ -18,6 +18,15 @@ use App\Http\Controllers\EmployeeController as EmployeeController;
 
 //Route::get('test/show',[TestController::class,'show']);
 
+Route::get('test/testArr',[TestController::class,'arrWork']);
+
+Route::get('test/InsertCss/{class}/{cssColor}/{input1}/{input2}/{input3}/{href}/{text}',
+    [TestController::class,'insertCSS'])
+    ->where('class','[a-zA-Z]+');
+
+Route::get('test/showInfoView/{name}/{age}/{salary}',[TestController::class,'showInfoView'])
+    ->where(['name'=>'[a-zA-z]+','age'=>'[0-9]{2}','salary'=>'[0-9]+']);
+
 Route::get('test/showHello',[TestController::class,'showHello']);
 
 Route::get('employee/view',[EmployeeController::class,'showView']);
