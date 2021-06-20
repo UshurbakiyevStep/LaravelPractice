@@ -11,6 +11,35 @@ class TestController extends Controller
      *
      */
 
+    public function testLoop():object {
+        $employees = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'salary' => 3000,
+            ],
+        ];
+
+        return view('components/test.test-loops',[
+            'arrNums'=>[1,2,3,4,5,6,7,8,9,0],
+            'arrStrings'=>['Well done','In this case','Wanna do smth?'],
+            'data'=>1,
+            'arrNested'=>[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]],
+            'employees'=>$employees,
+            'arrStr'=>[]
+        ]);
+    }
+
     public  function testCond():object {
             return view('components/test.test-condition',['dayOfWeek'=>7,'Month'=>3,'age'=>17,'arr'=>[
                 'one'=>1,'two'=>2,'three'=>3,'four'=>4

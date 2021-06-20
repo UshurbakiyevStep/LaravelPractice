@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController as TestController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\PageController as PagesController;
 use App\Http\Controllers\EmployeeController as EmployeeController;
 /*
@@ -17,6 +17,8 @@ use App\Http\Controllers\EmployeeController as EmployeeController;
 
 
 //Route::get('test/show',[TestController::class,'show']);
+
+Route::get('test/testLoops',[TestController::class,'testLoop']);
 
 Route::get('test/testCondition',[TestController::class,'testCond']);
 
