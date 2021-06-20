@@ -18,6 +18,8 @@ use App\Http\Controllers\EmployeeController as EmployeeController;
 
 //Route::get('test/show',[TestController::class,'show']);
 
+Route::get('test/testCondition',[TestController::class,'testCond']);
+
 Route::get('test/testArr',[TestController::class,'arrWork']);
 
 Route::get('test/InsertCss/{class}/{cssColor}/{input1}/{input2}/{input3}/{href}/{text}',

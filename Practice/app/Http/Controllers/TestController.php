@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
+    /**
+     * @return object
+     *
+     */
+
+    public  function testCond():object {
+            return view('components/test.test-condition',['dayOfWeek'=>7,'Month'=>3,'age'=>17,'arr'=>[
+                'one'=>1,'two'=>2,'three'=>3,'four'=>4
+            ]]);
+    }
     public function arrWork():object {
             return view('components/test.test-arr',
                 ['arr'=>['name'=>'Davlat','salary'=>111111,'age'=>21,'city'=>'Almaty'],
@@ -31,4 +41,5 @@ class TestController extends Controller
     public function sum($num1,$num2) :int {
         return $num1 + $num2;
     }
+
 }
