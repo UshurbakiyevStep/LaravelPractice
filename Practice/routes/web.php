@@ -18,6 +18,10 @@ use App\Http\Controllers\EmployeeController as EmployeeController;
 
 //Route::get('test/show',[TestController::class,'show']);
 
+Route::get('test/testBlade',[TestController::class,'testBlade']);
+
+Route::get('test/inheritanceView',[TestController::class,'inheritanceView']);
+
 Route::get('test/testLoops',[TestController::class,'testLoop']);
 
 Route::get('test/testCondition',[TestController::class,'testCond']);
