@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Post;
+use App\Http\Controllers\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\PageController as PagesController;
@@ -17,6 +19,13 @@ use App\Http\Controllers\EmployeeController as EmployeeController;
 
 
 //Route::get('test/show',[TestController::class,'show']);
+Route::get('categories',[Product::class,'showCategoryList']);
+Route::get('category/{catId}',[Product::class,'showCategory']);
+Route::get('product/{catId}/{prodId}',[Product::class,'showProduct']);
+Route::get('posts',[Post::class,'showAll']);
+
+Route::get('post/{id}',[Post::class,'showOne'])
+    ->where('id','[0-9]+');
 
 Route::get('test/testBlade',[TestController::class,'testBlade']);
 
