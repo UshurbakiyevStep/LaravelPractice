@@ -27,6 +27,8 @@
         Route::post('/result',[FormsPostController::class,'result']);
     });
 
+    Route::match(['get','post'],'forms/NumInput',[FormsPostController::class,'formNum']);
+
 
 //    Route::get('formTwoResult',[FormsOneController::class,'result']);
 //    Route::get('formTwo',[FormsOneController::class,'form']);
