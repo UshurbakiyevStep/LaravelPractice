@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class forms-ask-numbers_ex_result extends Component
+class formsasknumbers_ex_result extends Component
 {
     /**
      * Create a new component instance.

@@ -22,12 +22,15 @@
 
     //Route::get('test/show',[TestController::class,'show']);
 
-    Route::group(['prefix'=>'forms'],function(){
-        Route::get('/form',[FormsPostController::class,'forms']);
-        Route::post('/result',[FormsPostController::class,'result']);
-    });
-
-    Route::match(['get','post'],'forms/NumInput',[FormsPostController::class,'formNum']);
+//    Route::group(['prefix'=>'forms'],function(){
+//        Route::get('/form',[FormsPostController::class,'forms']);
+//        Route::post('/result',[FormsPostController::class,'result']);
+//        Route::get('/formAll/{id}',[FormsPostController::class,'formAll']);
+//    });
+//
+//    Route::get('test/method',[FormsPostController::class,'test']);
+//    Route::match(['get','post'],'forms/NumInput',[FormsPostController::class,'formNum']);
+//    Route::match(['get','post'], 'forms/catchAll/{id}',[FormsPostController::class,'formAllResult']);
 
 
 //    Route::get('formTwoResult',[FormsOneController::class,'result']);

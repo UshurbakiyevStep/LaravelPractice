@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class formsasknumbers_ex extends Component
+class formsGet extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class formsasknumbers_ex extends Component
      */
     public function render()
     {
-        return view('components.forms-ask-numbers_ex');
+        return view('components.forms-get');
     }
 }

@@ -31,4 +31,32 @@ class FormsPostController extends Controller
             return view('components/forms-ask-numbers_ex_result', ['num1' => $request->num1, 'num2' => $request->num2]);
         }
     }
+
+    public function formAll(Request $request,$id) {
+        return view('components/forms-all',['id'=>$id]);
+    }
+    public function formAllResult(Request $request,$id) {
+        $data = $request->only(['num1']);
+        $data = $request->except(['num1']);
+        return view('components/forms-all-result',['all'=>$data,'id'=>$id]);
+    }
+
+    public function test (Request $request) {
+        $path = $request->path();
+        $url = $request->url();
+        $fullUrl = $request->fullUrl();
+        $fullUrlAdd = $request->fullUrlWithQuery(['page'=>1]);
+        $uri = $request->getRequestUri();
+        print_r($request->getRequestUri());echo "<br>";
+        if ($request->is($uri)) $fullUrl = $request->fullUrlWithQuery(['num'=>1]);
+        else $fullUrl = $request->fullUrlWithQuery(['num'=>-1]);
+        return view(
+            'components/forms-get',
+            ['req'=>$request->all(),
+                'path'=>$path,
+                'url'=>$url,
+                'fullurl'=>$fullUrl
+            ]
+        );
+    }
 }
