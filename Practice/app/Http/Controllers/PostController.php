@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Post extends Controller
+class PostController extends Controller
 {
     protected array $post;
     public function __construct(){

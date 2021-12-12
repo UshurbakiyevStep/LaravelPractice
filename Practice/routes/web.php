@@ -2,8 +2,10 @@
 
     use App\Http\Controllers\FormsOneController;
     use App\Http\Controllers\FormsPostController;
-    use App\Http\Controllers\Post;
+    use App\Http\Controllers\PostController;
     use App\Http\Controllers\Product;
+    use App\Http\Controllers\SessionController;
+    use App\Http\Controllers\RedirectController;
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\TestController;
     use App\Http\Controllers\PageController as PagesController;
@@ -19,6 +21,24 @@
     |
     */
 
+    Route::get('/',function () {
+        return "Hello this is starting page, please use urls to get some response";
+    });
+
+
+//    Route::get('redirects/form',[RedirectController::class,'form']);
+//    Route::get('redirects/one',[RedirectController::class,'show1']);
+//    Route::get('redirects/two',[RedirectController::class,'show2']);
+//
+//    Route::get('redirects/{id}/emailForm',[RedirectController::class,'emailForm']);
+//    Route::get('redirects/{id}/emailOne',[RedirectController::class,'emailOne'])->name('emailOne');
+//    Route::get('redirects/emailTwo',[RedirectController::class,'emailTwo'])->name('emailTwo');
+
+//    Route::get('sessions/lesOne',[SessionController::class,'lessOne']);
+//    Route::get('sessions/counter',[SessionController::class,'updatePageCounter']);
+//    Route::get('sessions/forgetSession',[SessionController::class,'forgetSession']);
+//    Route::get('sessions/deleteAll',[SessionController::class,'deleteAllData']);
+//    Route::get('sessions/getAll',[SessionController::class,'getAllData']);
 
     //Route::get('test/show',[TestController::class,'show']);
 
@@ -39,9 +59,9 @@
 //    Route::get('categories',[Product::class,'showCategoryList']);
 //    Route::get('category/{catId}',[Product::class,'showCategory']);
 //    Route::get('product/{catId}/{prodId}',[Product::class,'showProduct']);
-//    Route::get('posts',[Post::class,'showAll']);
+//    Route::get('posts',[PostController::class,'showAll']);
 //
-//    Route::get('post/{id}',[Post::class,'showOne'])
+//    Route::get('post/{id}',[PostController::class,'showOne'])
 //        ->where('id','[0-9]+');
 //
 //    Route::get('test/testBlade',[TestController::class,'testBlade']);
